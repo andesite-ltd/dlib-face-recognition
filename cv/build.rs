@@ -4,6 +4,6 @@ fn main() {
     println!("cargo:rustc-link-lib=cblas");
 
     cpp_build::Config::new()
-        .include("/usr/include/opencv4")
+        .include("/usr/include/dlib")
         .build("src/lib.rs");
 }
