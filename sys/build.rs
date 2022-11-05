@@ -61,6 +61,7 @@ fn main() {
         .no_build_target(true)
         .define("DLIB_JPEG_SUPPORT", "1")
         .define("DLIB_PNG_SUPPORT", "1")
+        .define("DLIB_USE_CUDA", "1")
         // .define("DLIB_USE_BLAS", "1")
         // .define("DLIB_USE_LAPACK", "1")
         .define("USE_AVX_INSTRUCTIONS", "1")
