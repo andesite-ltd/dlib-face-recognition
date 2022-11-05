@@ -31,27 +31,27 @@ fn main() {
     let version_minor = env!("CARGO_PKG_VERSION_MINOR");
     let version_dlib = format!("{}.{}", version_major, version_minor);
 
-    // Try probing
-    if let Ok(library) = pkg_config::Config::new()
-        .print_system_cflags(false)
-        // .atleast_version(&version_dlib)
-        .probe("dlib-1")
-    {
-        fn write_paths(key: &str, paths: Vec<std::path::PathBuf>) {
-            println!(
-                "cargo:{}={}",
-                key,
-                std::env::join_paths(paths)
-                    .unwrap()
-                    .as_os_str()
-                    .to_str()
-                    .unwrap()
-            );
-        }
-        write_paths("root", library.link_paths);
-        write_paths("include", library.include_paths);
-        return;
-    }
+    // // Try probing
+    // if let Ok(library) = pkg_config::Config::new()
+    //     .print_system_cflags(false)
+    //     // .atleast_version(&version_dlib)
+    //     .probe("dlib-1")
+    // {
+    //     fn write_paths(key: &str, paths: Vec<std::path::PathBuf>) {
+    //         println!(
+    //             "cargo:{}={}",
+    //             key,
+    //             std::env::join_paths(paths)
+    //                 .unwrap()
+    //                 .as_os_str()
+    //                 .to_str()
+    //                 .unwrap()
+    //         );
+    //     }
+    //     write_paths("root", library.link_paths);
+    //     write_paths("include", library.include_paths);
+    //     return;
+    // }
 
     // Download
     let src = download_and_unzip(&version_dlib);
