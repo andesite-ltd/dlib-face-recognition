@@ -5,6 +5,7 @@ mod wrapper;
 
 use dlib_face_recognition::ImageMatrix;
 use opencv::prelude::Mat;
+use opencv::prelude::MatTraitConst;
 
 /// Copy a matrix from an opencv mat
 pub fn matrix_to_opencv_mat(mat: &Mat) -> ImageMatrix {
