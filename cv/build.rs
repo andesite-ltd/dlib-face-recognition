@@ -4,6 +4,6 @@ fn main() {
     println!("cargo:rustc-link-lib=cblas");
 
     cpp_build::Config::new()
-        .include("/usr/include/dlib")
+        .include("/usr/local/include")
         .build("src/lib.rs");
 }

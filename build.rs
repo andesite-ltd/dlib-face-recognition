@@ -46,7 +46,7 @@ fn main() {
         }
     }
     config
-        .include("/usr/include/dlib")
+        .include("/usr/local/include")
         .build("src/lib.rs");
 
     #[cfg(feature = "embed-any")]
