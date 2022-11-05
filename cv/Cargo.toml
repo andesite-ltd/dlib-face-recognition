@@ -18,8 +18,8 @@ include = ["src/**/*.rs", "build.rs", "Cargo.toml", "LICENSE"]
 
 [dependencies]
 cpp = "0.5"
-dlib-face-recognition = "0.1"
-opencv = "0.62"
+dlib-face-recognition = "0.2.2"
+opencv = "0.71"
 
 [build-dependencies]
 cpp_build = "0.5"
