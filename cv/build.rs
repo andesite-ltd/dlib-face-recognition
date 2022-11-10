@@ -5,5 +5,6 @@ fn main() {
 
     cpp_build::Config::new()
         .include("/usr/local/include")
+        .include("/usr/include/opencv4")
         .build("src/lib.rs");
 }
